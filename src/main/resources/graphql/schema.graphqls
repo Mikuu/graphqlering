@@ -1,0 +1,40 @@
+type Query {
+    bookById(id: ID): Book
+    animeById(id: ID): Anime
+}
+
+type Book {
+    id: ID
+    name: String
+    pageCount: Int
+    author: Author
+}
+
+type Author {
+    id: ID
+    firstName: String
+    lastName: String
+}
+
+type Anime {
+    id: ID
+    title: String
+    releasedOn: String
+    publisher: Publisher
+    scale: String
+    stars: [Actor]
+}
+
+type Publisher {
+    id: ID
+    companyName: String
+    companyAddress: String
+}
+
+type Actor {
+    id: ID
+    name: String
+    age: String
+    gender: String
+    scale: String
+}
